@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Input Route</title>
+</head>
+
+<body>
+    <h1>Input Route</h1>
+<p>Input information regardin gyour current commute.</p>
+
+<p>This information will be used to calculate how much commuting is costing over time, and compare the cost of purchasing different transportation passes.</p>
+
+<h2>Transportation Type</h2>
+<p>Choose which public transit service you primarily use:</p>
+
+<p><table>
+<tr><td>Watermelon</td> <td>$1,200.00</td></tr>
+<tr><td>Canteloupe <td>$400.00</td></tr>
+<tr><td>Honeydew <td>$1,750.00</td></tr>
+</p></table>
+
+<h2>Order Form</h2>
+
+<form>
+<div>
+Your name
+<input type="text" name="name">
+</div>
+<div>
+Who are we sending this to?
+<input type="text" name="recipient">
+</div>
+<div>
+Choose a melon
+<select name = "melon">
+    <option value = "Watermelon">Watermelon</option>
+    <option value = "Canteloupe">Canteloupe</option>
+    <option value = "Honeydew">Honeydew</option>
+    </select>
+</div>
+<div>When should we deliver?
+    <input type = "radio" name = "time" value = "am">
+    Morning
+    <input type = "radio" name = "time" value = "pm">
+    Evening
+    <input type = "radio" name = "time" value = "any">
+    Any time
+</div>
+
+
+
+<div>Enter your message:
+    <textarea name = "message"></textarea>
+</div>
+
+<div>Subscribe to our newsletter
+<input type="checkbox" name="subscribe" value="Yes">
+Yes
+</div>
+<input type="submit">
+</form>
+</body>
+</html>
