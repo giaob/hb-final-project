@@ -53,6 +53,8 @@ class Transportation(db.Model):
     day_fare = db.Column(db.Float)
     weekly_fare = db.Column(db.Float)
     monthly_fare = db.Column(db.Float)
+    per_trip = db.Column(db.Float)
+    prepay = db.Column(db.Float)
  
     def __repr__(self):
         return f"<Transportation transportation_id={self.transportation_id} transportType={self.transportType}>"
