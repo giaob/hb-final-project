@@ -30,7 +30,9 @@ def Transportation(transport_type, day_fare, weekly_fare, monthly_fare):
     transportation = Transportation(transport_type=transport_type,
         day_fare=day_fare,
         weekly_fare=weekly_fare,
-        monthly_fare=monthly_fare)
+        monthly_fare=monthly_fare,
+        per_trip=per_trip,
+        prepay=prepay)
 
     return transportation
 

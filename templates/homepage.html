@@ -1,43 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    </head>
-        <body>
-            Giao's App
+{% extends 'base.html' %}
 
-            Header, login
-
-            Form
+{% block body %}
             <div>
-                <form>
+                <div>
+                <form action="/results">
                     <label for="point-a">Where are you traveling from?</label>
-                    <select name="location" id="point-a">
+                    <select name="origin" id="point-a">
                         <option value="town-a">Town A</option>
                     </select>
-                </form>
-            </div>
-
-            <div>
-                <form>
-                    <label for="point-a">Where are you traveling to?</label>
-                    <select name="location" id="point-b">
+                </div>
+                
+                <div>
+                    <label for="point-b">Where are you traveling to?</label>
+                    <select name="destination" id="point-b">
                         <option value="town-b">Town B</option>
+                        <option value="town-c">Town C</option>
+                        <option value="town-d">Town D</option>
                     </select>
-                </form>
-            </div>
-
-            <form>
-                Which method of transportation do you use?
+                </div>
+                
+                <div>
+                        Which method of transportation do you use?
               
-                <input type="radio" name="transportation-type" value="donkey" id="donkey-cart">
-                <label for="donkey">Donkey Cart</label>
-              
-                <input type="radio" name="transportation-type" value="teleportation" id="teleportation-portal">
-                <label for="teleportation">Teleportation Portal</label>
-              </form>
-
-              <div>
-                <form>
+                        <input type="radio" name="transportation-type" value="donkey" id="donkey-cart">
+                        <label for="donkey">Donkey Cart</label>
+                        <input type="radio" name="transportation-type" value="teleportation" id="teleportation-portal">
+                        <label for="teleportation">Teleportation Portal</label>
+                </div>
+                <div>
                     <label for="point-a">How many times per week do you travel this route?
                         <!-- (This number is taken to multiply the the fare if the user is paying per trip.) --> </label>
                     <select name="frequency" id="frequency">
@@ -49,24 +39,21 @@
                         <option value="6">6</option>
                         <option value="7">7</option>
                     </select>
+                </div>
+
+                <div>
+                    Do you pay per trip or do you prepay?
+              
+                    <input type="radio" name="fare-type" value="per-trip" id="per-trip">
+                    <label for="per-trip">Per trip</label>
+                  
+                    <input type="radio" name="fare-type" value="prepay" id="prepay">
+                    <label for="prepay">Prepay</label>
+                </div>
+                <div>
+                    <input type="submit"></input>
+                </div>
                 </form>
             </div>
 
-            <div>
-                <form>
-                    Do you pay per trip or do you prepay?
-              
-                <input type="radio" name="" value="standard" id="per-trip">
-                <label for="standard-shipping">Per trip</label>
-              
-                <input type="radio" name="shipping" value="expedited" id="prepay">
-                <label for="expedited-shipping">Prepay</label>
-              </form>
-            </div>
-            
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-
-        </body>
-</html>
+{% endblock %}

@@ -16,7 +16,7 @@ class User(db.Model):
     password = db.Column(db.String)
 
     def __repr__(self):
-        return f'<User user_id={self.user_id} email={self.email}>'
+        return f'<User user_id={self.user_id} email={self.email}, {self.password}>'
 
 class Route(db.Model):
     """The starting and end point of the user's transportation route."""
